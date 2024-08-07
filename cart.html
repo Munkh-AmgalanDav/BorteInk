@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CART</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sevillana&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="https://www.vagaro.com/browsbynara">About</a>
+            <a href="https://www.vagaro.com/browsbynara/services">Services</a>
+            <a href="https://www.vagaro.com/browsbynara/classes">In-Person Training</a>
+            <a href="https://checkout.teachable.com/secure/1552299/checkout/order_79k552py">Online Course</a>
+            <a href="https://www.vagaro.com/browsbynara">Contact</a>
+        </div>
+    </div>
+    <div class="header">
+        <img class="menu-icon" src="icons8-menu.svg" alt="" onclick="toggleMenu()">
+
+        <a href="index.html"><img class="logo" src="logo.PNG" alt=""></a>
+
+        <div class="icon-container">
+            <img src="magnifier.svg" alt="">
+            <a href="cart.html">
+                <img style="width: 20px; height: 20px;" src="shopping-bag-svgrepo-com.svg" alt="">
+                <span id="item-number">0</span>
+            </a>
+
+        </div>
+
+    </div>
+    <div class="cart-items" id="shoppingBag">
+        <div class="cart-on-screen"></div>
+        <div class="cart-warnings">
+            <h2>Your cart is empty!</h2>
+            <a href="">Continue shopping</a>
+
+        </div>
+
+    </div>
+    <div class=" products-container_title">
+        <h3>Featured Products</h3>
+
+    </div>
+
+    <div class="products-container">
+        <div class="product">
+            <img src="machine.jpeg" alt="">
+            <h3>PMU Pen Machine</h3>
+            <p>$350.00</p>
+            <button class="add-to-cart" onclick="addToCart('mnkDA2HA4DK88ZQ0')">Add to cart</button>
+
+        </div>
+        <div class="product">
+            <img src="practiceSkin.PNG" alt="">
+            <h3>Practice Skin</h3>
+            <p>$5.00</p>
+            <button class="add-to-cart" onclick="addToCart('mnk9OX7U6WZH9730')">Add to cart</button>
+
+        </div>
+        <div class="product">
+            <img src="pencils.jpeg" alt="">
+            <h3>Pre-drawing Pencils</h3>
+            <p>$15.00</p>
+            <button class="add-to-cart" onclick="addToCart('mnkFDT8PTRZ1BQR0')">Add to cart</button>
+
+        </div>
+        <div class="product">
+            <img src="browbrush.jpeg" alt="">
+            <h3>PMU Brush</h3>
+            <p>$25.00</p>
+            <button class="add-to-cart" onclick="addToCart('mnkY41LW9N0WPBH0')">Add to cart</button>
+
+        </div>
+
+    </div>
+    <div class="footer-block_header">
+        <h2>CONNECT</h2>
+        <a href="">INSTAGRAM</a>
+        <h2>MENU</h2>
+        <a href="">SHIPPING & RETURNS</a>
+        <br>
+        <a href="">CONTACT US</a>
+
+    </div>
+
+    <div class="footer">
+        <img src="Borte Logo_2.JPEG" alt="">
+        <h3>Join our mailing list</h3>
+        <div class="email-input">
+            <span>Email</span>
+            <input type="text">
+            <button>Subscribe</button>
+        </div>
+        <div class="footer-info">
+            <p> © 2024 BÖRTE ink STUDIO | All rights reserved. | </p>
+
+        </div>
+
+    </div>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
