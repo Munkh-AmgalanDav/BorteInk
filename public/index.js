@@ -5,7 +5,7 @@ let product1 = {
     name: 'PMU Pen Machine',
     quantity: 1,
     img: 'machine.jpeg',
-    price: '$350',
+    price: '$'+ 350,
     id: 'mnkDA2HA4DK88ZQ0',
     button: 'Delete item',
 }
@@ -14,7 +14,7 @@ let product2 = {
     name: 'Practice Skin',
     quantity: 1,
     img: 'practiceSkin.PNG',
-    price: '$5',
+    price: '$' + 5,
     id: 'mnk9OX7U6WZH9730',
     button: 'Delete item',
 }
@@ -22,7 +22,7 @@ let product3 = {
     name: 'Pre-drawing Pencils',
     quantity: 1,
     img: 'pencils.jpeg',
-    price: '$15',
+    price: '$' + 15,
     id: 'mnkFDT8PTRZ1BQR0',
     button: 'Delete item',
 }
@@ -31,7 +31,7 @@ let product4 = {
     name: 'PMU Brush',
     quantity: 1,
     img: 'browbrush.jpeg',
-    price: '$25',
+    price: '$' + 25,
     id: 'mnkY41LW9N0WPBH0',
     button: 'Delete item',
 }
@@ -105,11 +105,30 @@ function render() {
     } else {
         document.querySelector('.cart-warnings').style.display = 'block';
     }
+    if (cart.length == 0){
+        document.querySelector('.cart-footer').style.display = 'none'
+    } else {
+        document.querySelector('.cart-footer').style.display = 'block'
+    }
+
+
     const totalQuantity = cart.reduce((sum, a) => sum + a.quantity, 0);
 
     console.log(totalQuantity, 'total quantity');
     let result = document.querySelector('#item-number')
     result.innerHTML = totalQuantity;
+
+
+
+    let totalPrice = cart.reduce((sum, product) => {
+        // Extract numeric part from price string and convert to number
+        let numericPrice = parseFloat(product.price.replace(/[^0-9.-]+/g, ''));
+        return sum + (numericPrice * product.quantity);
+    }, 0);
+    
+    console.log(totalPrice);
+    let subtotal = document.querySelector('#subtotalValue')
+    subtotal.innerHTML = '$' + totalPrice + ' USD';
 
 
     while (i < cart.length) { // 0 < 2
@@ -196,24 +215,3 @@ function render() {
 
 
 
-// Delete button
-
-// 1. create button element using createElement
-// 2. add innerText to button
-// 3. add delete function to button onclick
-// 4. add button to productCardEl using append
-
-// Delete product from cart function
-
-//         0      1      2    3     4        5       6
-let arr = [321, 24215, 3321, 451, 51432124, 12426, 4214217];
-
-// console.log(arr);
-// //              i = 2
-// console.log(arr[0]);
-// console.log(arr[1]);
-// console.log(arr[2]);
-// console.log(arr[3]);
-// console.log(arr[4]);
-// console.log(arr[5]);
-// console.log(arr[6]);

@@ -392,7 +392,7 @@ body {
 
 .overlay-content {
     position: relative;
-    top: 25%;
+    top: 20%;
     width: 100%;
     text-align: center;
     margin-top: 30px;
@@ -461,4 +461,35 @@ body {
 
 .cart-product span {
     padding: 1px 10px;
+}
+.subtotal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    padding-top: 50px;
+    border-top: 1px solid hsl(0, 0%, 85%)
+}
+.subtotal h4 {
+    font-weight: 400;
+}
+#subtotalValue {
+    font-weight: 200;
+    font-size: 16px;
+}
+.cart-footer p {
+    font-size: 12px;
+    font-weight: 200;
+}
+.cart-footer button {
+    width: 288px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid hsl(0, 0%, 55%);
+    font-weight: 300;
+}
+.cart-footer>button:hover {
+    border: 1.5px solid black;
+    cursor: pointer;
 }
